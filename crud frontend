@@ -1,0 +1,24 @@
+
+// Create | 
+// axios.post("..........",values)
+// alert ("success")
+
+// ////////////////////
+
+// update | 
+// axios.put("................{id}",values)
+// edited successful
+
+// axios.get(............{id})
+// formik.setValues()
+
+// ////////////////////////////
+
+// delete | 
+// axios.delete("..............{id}")
+// prevdate.filter((item)=>item.id !== id);
+
+// get all
+
+// axios.get("............",values)
+// redpoce.data

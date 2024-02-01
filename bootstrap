@@ -1,0 +1,9 @@
+npm install bootstrap \
+
+then add to app.js as import "bootstrap"
+import "bootstrap.css.dist.bootstrap.css"
+
+start yoiur bootstrap which contains 
+card , navbar, header, colour which all having responbsive
+
+flex,box-model 
