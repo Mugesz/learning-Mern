@@ -1,0 +1,115 @@
+BACKEND
+
+
+first craete route as path name and add to index.js file
+
+const express = require("express");
+const mongoose = require("mongoose");
+
+const route = express().Router
+
+mongoose.connect("......................")
+
+schema :const X = new mongoose.Schema({
+ A = "string",
+ B = "number"
+})
+
+const xY = mongoose.model("dbname",X)
+create
+
+route.post("/create",async(req,res)=>{
+    const x = new xY({
+        A = req.body.A,
+        B = req.body.B
+    })
+
+    await x.save()
+})
+
+get all 
+
+route.get("/getall",async(req,res)=>{
+
+ try{
+    const  Y = await xY.find()
+    res.send (Y)
+ }catch(error) {
+console(error)
+ }
+
+});
+
+get one 
+route.get("/getOne/;id",async(req,res)=>{
+
+    try{
+        const {id}= req.params
+      const y = await xY.findById(id)
+      res.send(y)
+    } catch(error){
+        clg(error)
+    }
+
+});
+
+edit
+
+router.put("/edit/:id",async(req,res)=>{
+
+    try{
+        const {id}= req.params;
+        const x = updateFields{
+            A = "string",
+            B = "number"
+        }
+        const Y = xY.findByIdAndUpdate(id,x)
+        res.send(Y)
+    } catch (error){
+        clg(error)
+    }
+
+});
+
+delete
+route.delete("/delete/:id",async(req,res)=>{
+    try{
+        const {id}= req.params;
+         const Y = findByIdAndDelete(id)
+         res.json("deleted sucessfully")
+    } catch (error){
+        clg(error)
+    }
+})
+
+
+ports works in localhost://5055
+
+FRONTEND
+
+in fetching part for 
+
+craete
+
+axios.post("localhost://5055/create",values)
+alert("success")
+
+get all 
+
+axios.get("localhost://5055/getall")
+responce.data
+
+getone 
+
+axios.get("localhost://5055/getone/{id}")
+responce.data
+
+edit
+
+axios.put("localhost://5055/edit/{id}",values)
+axios.get("localhost://5055/getone/{id}")
+formik.setValues
+
+delete 
+axios.delete("localhost://5055/delete/{id})
+alert("success")
