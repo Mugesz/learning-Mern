@@ -1,0 +1,73 @@
+context
+
+ create usecontext.jsx file 
+
+ const userContext = createContext();
+
+ export const userProvider = ({children})=->{
+    <userContext.provider value={{x,y,z}}>
+        {children}
+    </userContext.provider>
+ }
+ 
+ 
+
+ export default userContext;
+
+ after that in app js 
+ link the userProvider with tag name
+
+ then when ever the hook need to call at ther components 
+ use const {x,y,y}= useContext(userContext)
+
+ ///////////////////////////////////////////////////////////////
+
+ redux
+
+ instal @reduxjs/toolkit , react-redux package from npm
+
+ create store.js file
+
+ import xz from "./slice.js"
+ export const store  = ConfigureStore({
+    reducer:{
+        xyz : xz
+    }
+ })
+
+ create slice.js 
+
+ import {createSlice} frpm reduxjs/toolkit
+
+ const inatialstate = []
+
+ const costumerSlice = createSlice({
+    name : "xyz"
+    inatialState : inatialstate
+    reducers : {
+        xz(state,action){
+          state.push(action.payload)
+        }
+    }
+ })
+
+ export const {xz} =  costumerSlice.actions:
+ export default costumerSlice.reducer
+
+
+ in app.js create a components s <Provider> in react redux
+ import store from "./store"
+
+ <Provider store = {store}>
+all components 
+ </Provider>
+  
+
+  in nencessary components 
+  import xz from "./slice.js"
+  import {useDispatch} from reaxtredux
+
+  dispatch(xz(wantedData))
+
+
+  /////////////////////////////////////////////////////////////////
