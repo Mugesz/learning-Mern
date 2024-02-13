@@ -6,7 +6,7 @@ to create react apopo
 
 
 to create vite app 
-1st npm create vite@latefa-stack
+1st npm create vite@latest
 
 
 //////////////////////
@@ -16,10 +16,10 @@ to create node
 1st inde.js file and then add express and expressjs  env.config 
 
 
-routes path.jsin index.js add the route name 
+routes path.js index.js add the route name 
 eg |(user.require(path/path.js))
 
 create models for mongoose 
-link te models in rohte path.js
+link the models in route path.js
 
 /'////////////////////////////////////
