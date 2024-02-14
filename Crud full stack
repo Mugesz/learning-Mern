@@ -111,5 +111,5 @@ axios.get("localhost://5055/getone/{id}")
 formik.setValues
 
 delete 
-axios.delete("localhost://5055/delete/{id})
+axios.delete("localhost://5055/delete/{id}")
 alert("success")
