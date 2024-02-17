@@ -15,7 +15,7 @@ let rows = "5";
 for (let i = 1; i <= rows; i++) {
   let arr = "";
   for (let j = 1; j <= rows - i + 1; j++) {
-    arr += j;
+    arr += "*";
   }
   console.log(arr);
 }
