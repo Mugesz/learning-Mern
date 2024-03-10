@@ -1,9 +1,8 @@
 npm install bootstrap \
+import "bootstrap"
+import "bootstrap.dist.css.bootstrap.min.css"
 
-then add to app.js as import "bootstrap"
-import "bootstrap.css.dist.bootstrap.css"
-
-start yoiur bootstrap which contains 
+start your bootstrap which contains 
 card , navbar, header, colour which all having responbsive
 
 flex,box-model 

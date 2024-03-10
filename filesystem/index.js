@@ -21,3 +21,16 @@ fs.writeFile("./text1.txt"," Hello write",{flag:"a"},(req)=>{
     }
     console.log("success")
 })
+
+// stream
+
+const readableStream = fs.createReadStream("./file1.txt",{
+    encoding:"utf-8"
+})
+
+const writeStream = fs.createWriteStream("./text1.txt")
+
+readableStream.on("data",(chunk)=>{
+console.log(chunk)
+writeStream.write(chunk)
+})
